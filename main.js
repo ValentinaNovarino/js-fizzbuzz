@@ -3,22 +3,17 @@
 // al posto dei multipli di 5, deve stampare "Buzz"
 // al posto dei multipli sia di 3 che di 5, deve stampare "FizzBuzz"
 
+
+
 // ***Creare un programma che stampi tutti i numeri da 1 a 100
-for (var i = 3; i < 100; i++) {
-    // stampare "Fizz" al posto dei multipli di 3
-    if (i % 3 == 0) {
-        console.log('Fizz');
-    }
-    // stampare "Buzz" al posto dei multipli di 5
-    if (i % 5 == 0) {
-        console.log('Buzz');
-    }
-    // stampare "FizzBuzz" al posto dei multipli sia di 3 che di 5
-    if (i % 3 == 0 && i % 5 == 0) {
+for (var i = 1; i <= 100; i++) {
+    if ((i % 5 == 0) && (i % 3 == 0)){   /*stampare i numeri multipli sia di 3 che di 5*/
         console.log('FizzBuzz');
-    }
-    // stampare il numero se non è nè multiplo di 3 nè di 5
-    if (i % 3 != 0 && i % 5 != 0) {
+    } else if (i % 3 == 0) {             /*stampare solo i multipli di 3*/
+        console.log('Fizz');
+    } else if (i % 5 == 0) {             /*stampare solo i multipli di 5*/
+        console.log('Buzz');
+    } else {
         console.log(i);
     }
 }
